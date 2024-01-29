@@ -5,8 +5,6 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 
-from make import Driver
-
 from urllib.request import urlopen
 
 import time
@@ -32,7 +30,6 @@ while True:
     else:
         break
 
-"""## Download do arquivo"""
 
 driver.switch_to.default_content()
 time.sleep(2)
