@@ -10,11 +10,17 @@ from urllib.request import urlopen
 import time
 
 from selenium import webdriver
-from webdriver_manager.firefox import GeckoDriverManager
+
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 
-driver = webdriver.Chrome()
+service = Service(ChromeDriverManager().install())
+
+driver = webdriver.Chrome(service=service)
+
 driver.get("http://diariooficial.imprensaoficial.com.br/nav_v6/index.asp?c=34031&e=20231030&p=1")
+
 time.sleep(5)
 
 
